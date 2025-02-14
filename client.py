@@ -6,7 +6,7 @@ from flwr.client import NumPyClient
 import tensorflow as tf
 import numpy as np
 import pandas as pd
-
+from sklearn.utils import shuffle
 from sklearn.preprocessing import MinMaxScaler
 
 from task import create_model, train, test, get_parameters, set_parameters
@@ -32,6 +32,9 @@ y_train, y_test = y[:split_idx], y[split_idx:]
 scaler = MinMaxScaler().fit(X_train)
 X_train = scaler.transform(X_train)
 X_test  = scaler.transform(X_test)
+
+
+
 
 # 4) Create local model
 model = create_model()
@@ -61,3 +64,7 @@ class FlowerClient(NumPyClient):
 if __name__ == "__main__":
     print(f"Starting client {client_id}, CSV: {csv_path}")
     fl.client.start_client(server_address="localhost:8080", client=FlowerClient())
+
+
+
+
