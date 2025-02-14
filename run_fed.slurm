@@ -1,9 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=FedAvg
+#SBATCH --job-name=FedAvgGPU
+#SBATCH --partition=gpu_v100
 #SBATCH --nodes=1
 #SBATCH --ntasks=6       # 1 server + 5 clients
 #SBATCH --cpus-per-task=2
-#SBATCH --time=01:00:00
+#SBATCH --time=02:00:00
 #SBATCH --output=fedavg_%j.out
 #SBATCH --error=fedavg_%j.err
 
@@ -15,6 +16,9 @@ source /home/c.c24079993/fed_env/bin/activate
 
 # 3) Move to your code directory (adjust path as needed)
 cd /home/c.c24079993/fed_env/
+
+# This will produce client_data/client_0.csv etc.
+python partition_dataset.py
 
 # 4) Launch the Flower server on one task
 srun --exclusive -n1 python server.py &
@@ -29,6 +33,4 @@ done
 
 # 7) Wait until all background processes finish
 wait
-
-
 
