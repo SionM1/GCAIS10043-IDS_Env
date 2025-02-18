@@ -2,7 +2,7 @@
 #SBATCH --job-name=FedAvgGPU
 #SBATCH --partition=gpu_v100
 #SBATCH --nodes=1
-#SBATCH --ntasks=6       # 1 server + 5 clients
+#SBATCH --ntasks=6       # 1 server + 10 clients
 #SBATCH --cpus-per-task=2
 #SBATCH --time=02:00:00
 #SBATCH --output=fedavg_%j.out
