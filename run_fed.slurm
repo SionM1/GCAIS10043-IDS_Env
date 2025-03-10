@@ -27,7 +27,7 @@ srun --exclusive -n1 python server.py &
 sleep 5
 
 # 6) Launch the five clients on separate tasks
-for i in {0..4}; do
+for i in {0..9}; do
     srun --exclusive -n1 python client.py "$i" &
 done
 
