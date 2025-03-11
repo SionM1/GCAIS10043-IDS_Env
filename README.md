@@ -28,6 +28,9 @@ This project implements a federated learning system where multiple clients can t
 - `client.py`: Flower client implementation for federated learning
 - `server.py`: Server-side aggregation and metric computation
 
+### Contributions 
+Harry Jones - Model development: https://github.com/jones-hdj/GCAIS10043-IDS
+
 ## Getting Started
 
 ### Prerequisites
@@ -46,7 +49,7 @@ python server.py
 ```bash
 python client.py
 ```
-### HPC Execution with Slurm
+### HPC Execution with Slurm 
 
 1. Submit the server job:
 ```bash
@@ -74,5 +77,7 @@ The system tracks multiple performance metrics:
 - Recall (weighted)
 - F1-Score (weighted)
 
-### Contrubutions
-Harry Jones - Model development https://github.com/jones-hdj/GCAIS10043-IDS
+
+
+
+
