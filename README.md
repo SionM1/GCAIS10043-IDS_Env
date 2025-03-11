@@ -73,4 +73,5 @@ The system tracks multiple performance metrics:
 - Precision (weighted)
 - Recall (weighted)
 - F1-Score (weighted)
-
+### Contrubutions
+Harry Jones - Model development https://github.com/jones-hdj/GCAIS10043-IDS
