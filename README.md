@@ -30,6 +30,7 @@ This project implements a federated learning system where multiple clients can t
 
 ### Contributions 
 Harry Jones - Model development: https://github.com/jones-hdj/GCAIS10043-IDS
+Joseph Perry - Dataset and Adversarial Testing Development: https://github.com/perryhale/GCAIS10043-Adversarial
 
 ## Getting Started
 
