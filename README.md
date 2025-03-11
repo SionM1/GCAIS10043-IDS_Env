@@ -35,7 +35,7 @@ This project implements a federated learning system where multiple clients can t
 pip install flwr tensorflow numpy pandas
 ```
 
-### Usage
+### Local Usage
 
 1. Start the server:
 ```bash
@@ -46,6 +46,17 @@ python server.py
 ```bash
 python client.py
 ```
+### HPC Execution with Slurm
+
+1. Submit the server job:
+```bash
+sbatch server.slurm
+```
+
+2. Submit multiple client jobs:
+```bash
+sbatch client.slurm
+
 
 ## Key Functions
 
